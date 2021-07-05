@@ -5,6 +5,10 @@ export function Confirmable(
   propertyKey: string,
   descriptor: PropertyDescriptor
 ) {
+  console.log('_', target);
+  console.log('_', propertyKey);
+  console.log('_', descriptor.value);
+
   // we first cache the original method implementation
   const originalMethod = descriptor.value;
 
